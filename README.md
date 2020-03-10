@@ -1,4 +1,4 @@
-# Covid19RegionaleItalia
+# Covid19RegionaleItaliaScript
 Script in MATLAB per graficare l'andamento dei contagi regionali da Corona Virus COVID19 utilizzando i dati forniti dalla protezione civile (link dati -> https://github.com/pcm-dpc/COVID-19)
 
 1. Avviare regionaleCovid19.m in MATLAB
