@@ -13,8 +13,19 @@ for i = 1:sizeRegione
     regione_data(i) = datetime(regione(i).data,'InputFormat','yyyy-MM-dd HH:mm:ss');
 end
 regione_totcasi = vertcat(regione.totale_casi);
+regione_nuoviPos = vertcat(regione.nuovi_attualmente_positivi);
+
+subplot (2,1,1)
 plot (regione_data,regione_totcasi,'-o')
-title (target)
+title (sprintf('Andamento Integrale %s ', target))
+xlabel('Tempo [Giorni]') 
+ylabel('Unità')
+grid on
+grid minor
+
+subplot (2,1,2)
+plot (regione_data,regione_nuoviPos,'-o')
+title (sprintf('Andamento Giornaliero %s ', target))
 xlabel('Tempo [Giorni]') 
 ylabel('Unità')
 grid on
